@@ -60,9 +60,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChooseFragment.cs" />
+    <Compile Include="db\City.cs" />
+    <Compile Include="db\Country.cs" />
+    <Compile Include="db\Province.cs" />
+    <Compile Include="gson\Basic.cs" />
+    <Compile Include="gson\Forecast.cs" />
+    <Compile Include="gson\Now.cs" />
+    <Compile Include="gson\Suggestion.cs" />
+    <Compile Include="gson\Weather.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\HttpUtil.cs" />
+    <Compile Include="util\Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -146,6 +156,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\layout\choose_area.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{12c6db07-0ba6-4063-bb0f-e50cdecd8e52}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
