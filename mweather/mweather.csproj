@@ -35,6 +35,9 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -56,6 +59,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,9 +70,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\app_bar_main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -114,6 +115,37 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\choose_area.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_back.png" />
+    <Content Include="Resources\layout\forecast.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\forecast_item.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\now.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\suggestion.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\title.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\activity_weather.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\aqi.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\choose_area.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
